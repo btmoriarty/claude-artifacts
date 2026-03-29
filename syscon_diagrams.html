@@ -7,155 +7,82 @@
 <link href="https://unpkg.com/@fontsource/permanent-marker/index.css" rel="stylesheet">
 <link href="https://unpkg.com/@fontsource/caveat/400.css" rel="stylesheet">
 <style>
-  body {
-    margin: 0;
-    font-family: 'Caveat', sans-serif;
-    background: #F5F0E8;
-    color: #333;
-  }
-  header {
-    background: #1a3a5c;
-    color: #FDF8F0;
-    padding: 20px 40px;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 22px;
-    letter-spacing: 1px;
-  }
-  nav {
-    background: #EDE8DF;
-    padding: 12px 40px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #C9B99A;
-  }
-  nav a {
-    font-family: 'Caveat', sans-serif;
-    font-size: 16px;
-    color: #1a3a5c;
-    text-decoration: none;
-    padding: 4px 10px;
-    border-radius: 4px;
-    border: 1px solid #C9B99A;
-    background: #FDF8F0;
-  }
+  body { margin: 0; font-family: 'Caveat', sans-serif; background: #F5F0E8; color: #333; }
+  header { background: #1a3a5c; color: #FDF8F0; padding: 20px 40px; font-family: 'Permanent Marker', cursive; font-size: 22px; letter-spacing: 1px; }
+  header p { font-family: 'Caveat', sans-serif; font-size: 15px; color: #7a9aba; margin: 4px 0 0; font-weight: normal; letter-spacing: 0; }
+  nav { background: #EDE8DF; padding: 12px 40px; display: flex; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid #C9B99A; }
+  nav a { font-family: 'Caveat', sans-serif; font-size: 15px; color: #1a3a5c; text-decoration: none; padding: 4px 12px; border-radius: 4px; border: 1px solid #C9B99A; background: #FDF8F0; }
   nav a:hover { background: #C8E6C9; }
-  .diagram-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 24px;
-  }
-  .diagram-label {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 16px;
-    color: #7a9aba;
-    margin-bottom: 6px;
-    letter-spacing: 1px;
-  }
-  .diagram-title {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 26px;
-    color: #1a3a5c;
-    margin-bottom: 16px;
-  }
-  .diagram-wrap {
-    background: #FDF8F0;
-    border-radius: 12px;
-    border: 1px solid #C9B99A;
-    padding: 16px;
-    overflow: hidden;
-  }
-  hr.divider {
-    border: none;
-    border-top: 1px dashed #C9B99A;
-    margin: 48px 0;
-  }
+  .diagram-section { max-width: 900px; margin: 40px auto; padding: 0 24px; }
+  .diagram-label { font-family: 'Permanent Marker', cursive; font-size: 14px; color: #7a9aba; margin-bottom: 4px; letter-spacing: 1px; }
+  .diagram-title { font-family: 'Permanent Marker', cursive; font-size: 26px; color: #1a3a5c; margin-bottom: 16px; }
+  .diagram-wrap { background: #FDF8F0; border-radius: 12px; border: 1px solid #C9B99A; padding: 16px; overflow: hidden; }
+  hr.divider { border: none; border-top: 1px dashed #C9B99A; margin: 48px auto; max-width: 900px; }
+  footer { text-align: center; padding: 32px; font-family: 'Caveat', sans-serif; font-size: 13px; color: #AAA; }
 </style>
 </head>
 <body>
 
-<header>SysCon 2026 — Presentation Diagrams</header>
+<header>
+  SysCon 2026 — Presentation Diagrams
+  <p>Brian Moriarty &nbsp;|&nbsp; IEEE SysCon 2026 &nbsp;|&nbsp; Halifax, Nova Scotia &nbsp;|&nbsp; CC BY 4.0</p>
+</header>
 
 <nav>
   <a href="#slide4">Slide 4 — Two Architectures</a>
   <a href="#slide5">Slide 5 — Centaur Failure</a>
   <a href="#slide6">Slide 6 — Cyborg Failure</a>
+  <a href="#slide8">Slide 8 — Three-Phase Evolution</a>
+  <a href="#slide10">Slide 10 — Architecture Selection</a>
 </nav>
 
-<!-- ============================================================ -->
-<!-- SLIDE 4: TWO ARCHITECTURES -->
-<!-- ============================================================ -->
+<!-- SLIDE 4 -->
 <div class="diagram-section" id="slide4">
   <div class="diagram-label">Slide 4</div>
   <div class="diagram-title">Two Architectures</div>
   <div class="diagram-wrap">
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 385" style="display:block">
   <defs>
-    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-    <marker id="arr-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#E65100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#1565C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
+    <marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="a4o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#E65100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="a4b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#1565C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
-
   <rect x="12" y="12" width="308" height="361" rx="10" fill="none" stroke="#C9B99A" stroke-width="1" stroke-dasharray="5,3"/>
   <rect x="360" y="12" width="308" height="361" rx="10" fill="none" stroke="#C9B99A" stroke-width="1" stroke-dasharray="5,3"/>
-
   <text x="166" y="37" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="20" fill="#1a3a5c">CENTAUR</text>
   <text x="166" y="53" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#7a9aba">Gated Validation</text>
-
   <rect x="96" y="63" width="140" height="44" rx="6" fill="#C8E6C9" stroke="#388E3C" stroke-width="1.5"/>
   <text x="166" y="81" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#1B5E20">HUMAN</text>
   <text x="166" y="96" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#2E7D32">Problem framing</text>
-
-  <line x1="166" y1="107" x2="166" y2="124" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
-
+  <line x1="166" y1="107" x2="166" y2="124" stroke="#666" stroke-width="1.5" marker-end="url(#a4)"/>
   <rect x="96" y="126" width="140" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
   <text x="166" y="144" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#0D47A1">AI</text>
   <text x="166" y="159" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#1565C0">Proposal generation</text>
-
-  <line x1="166" y1="170" x2="166" y2="187" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
-
+  <line x1="166" y1="170" x2="166" y2="187" stroke="#666" stroke-width="1.5" marker-end="url(#a4)"/>
   <polygon points="166,189 188,211 166,233 144,211" fill="#FFF9C4" stroke="#F57F17" stroke-width="1.5"/>
   <text x="166" y="215" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#E65100">GATE</text>
-
-  <line x1="166" y1="233" x2="166" y2="250" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
-
+  <line x1="166" y1="233" x2="166" y2="250" stroke="#666" stroke-width="1.5" marker-end="url(#a4)"/>
   <rect x="96" y="252" width="140" height="44" rx="6" fill="#C8E6C9" stroke="#388E3C" stroke-width="1.5"/>
   <text x="166" y="270" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#1B5E20">HUMAN</text>
   <text x="166" y="285" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#2E7D32">Explicit validation</text>
-
-  <line x1="166" y1="296" x2="166" y2="313" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
-
+  <line x1="166" y1="296" x2="166" y2="313" stroke="#666" stroke-width="1.5" marker-end="url(#a4)"/>
   <rect x="96" y="315" width="140" height="40" rx="6" fill="#ECEFF1" stroke="#546E7A" stroke-width="1.5"/>
   <text x="166" y="339" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#263238">DECISION</text>
-
   <text x="514" y="37" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="20" fill="#1a3a5c">CYBORG</text>
   <text x="514" y="53" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#7a9aba">Supervisory Control</text>
-
   <rect x="368" y="65" width="292" height="116" rx="22" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.5" stroke-dasharray="6,3"/>
   <text x="514" y="80" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#F9A825">continuous process</text>
-
   <rect x="379" y="86" width="112" height="40" rx="6" fill="#C8E6C9" stroke="#388E3C" stroke-width="1.5"/>
   <text x="435" y="102" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="11" fill="#1B5E20">HUMAN</text>
   <text x="435" y="116" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="10" fill="#2E7D32">Monitor &amp; guide</text>
-
   <rect x="537" y="86" width="112" height="40" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
   <text x="593" y="102" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="11" fill="#0D47A1">AI</text>
   <text x="593" y="116" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="10" fill="#1565C0">Execute &amp; refine</text>
-
-  <path d="M 491 92 Q 514 74 537 92" fill="none" stroke="#E65100" stroke-width="1.5" marker-end="url(#arr-orange)"/>
-  <path d="M 537 114 Q 514 138 491 114" fill="none" stroke="#1565C0" stroke-width="1.5" marker-end="url(#arr-blue)"/>
-
+  <path d="M 491 92 Q 514 74 537 92" fill="none" stroke="#E65100" stroke-width="1.5" marker-end="url(#a4o)"/>
+  <path d="M 537 114 Q 514 138 491 114" fill="none" stroke="#1565C0" stroke-width="1.5" marker-end="url(#a4b)"/>
   <text x="514" y="73" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="10" fill="#E65100">constraints</text>
   <text x="514" y="150" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="10" fill="#1565C0">proposals</text>
-
-  <line x1="514" y1="181" x2="514" y2="214" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
-
+  <line x1="514" y1="181" x2="514" y2="214" stroke="#666" stroke-width="1.5" marker-end="url(#a4)"/>
   <rect x="444" y="216" width="140" height="44" rx="6" fill="#ECEFF1" stroke="#546E7A" stroke-width="1.5"/>
   <text x="514" y="234" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#263238">EXECUTION</text>
   <text x="514" y="249" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#546E7A">no fixed gate</text>
@@ -165,192 +92,251 @@
 
 <hr class="divider">
 
-<!-- ============================================================ -->
-<!-- SLIDE 5: CENTAUR FAILURE MODE -->
-<!-- ============================================================ -->
+<!-- SLIDE 5 -->
 <div class="diagram-section" id="slide5">
   <div class="diagram-label">Slide 5</div>
   <div class="diagram-title">Centaur Failure Mode</div>
   <div class="diagram-wrap">
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 400" style="display:block">
   <defs>
-    <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-    <marker id="arr2-faded" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
+    <marker id="a5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="a5f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#BBBBBB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
-
   <text x="170" y="28" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="17" fill="#2E7D32">Healthy Centaur</text>
   <text x="510" y="28" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="17" fill="#C62828">Degraded Centaur</text>
-
   <line x1="340" y1="36" x2="340" y2="390" stroke="#C9B99A" stroke-width="1.5" stroke-dasharray="6,4"/>
-
   <rect x="100" y="44" width="140" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
   <text x="170" y="62" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#0D47A1">AI</text>
   <text x="170" y="77" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#1565C0">Proposal generation</text>
-
-  <line x1="170" y1="88" x2="170" y2="106" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-
+  <line x1="170" y1="88" x2="170" y2="106" stroke="#555" stroke-width="1.5" marker-end="url(#a5)"/>
   <polygon points="170,108 196,134 170,160 144,134" fill="#FFF9C4" stroke="#F57F17" stroke-width="2"/>
   <text x="170" y="138" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#E65100">GATE</text>
-
-  <line x1="170" y1="160" x2="170" y2="178" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-
+  <line x1="170" y1="160" x2="170" y2="178" stroke="#555" stroke-width="1.5" marker-end="url(#a5)"/>
   <rect x="100" y="180" width="140" height="44" rx="6" fill="#C8E6C9" stroke="#388E3C" stroke-width="2"/>
   <text x="170" y="198" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#1B5E20">HUMAN</text>
   <text x="170" y="213" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#2E7D32">Evaluates output</text>
-
-  <line x1="170" y1="224" x2="170" y2="242" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-
+  <line x1="170" y1="224" x2="170" y2="242" stroke="#555" stroke-width="1.5" marker-end="url(#a5)"/>
   <rect x="100" y="244" width="140" height="40" rx="6" fill="#ECEFF1" stroke="#546E7A" stroke-width="2"/>
   <text x="170" y="268" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#263238">DECISION</text>
-
   <rect x="68" y="302" width="204" height="36" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="1.5"/>
   <text x="170" y="318" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#1B5E20">Authority rests with human</text>
   <text x="170" y="332" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#2E7D32">Gate is functional</text>
-
-  <!-- DEGRADED RIGHT -->
   <rect x="440" y="44" width="140" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
   <text x="510" y="62" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#0D47A1">AI</text>
   <text x="510" y="77" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#1565C0">Proposal generation</text>
-
-  <line x1="510" y1="88" x2="510" y2="106" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr2-faded)"/>
-
+  <line x1="510" y1="88" x2="510" y2="106" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a5f)"/>
   <polygon points="510,108 536,134 510,160 484,134" fill="#F5F5F5" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3"/>
   <text x="510" y="131" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="11" fill="#AAAAAA">GATE</text>
   <text x="510" y="147" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#BBBBBB">ceremonial</text>
-
-  <line x1="510" y1="160" x2="510" y2="178" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr2-faded)"/>
-
+  <line x1="510" y1="160" x2="510" y2="178" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a5f)"/>
   <rect x="440" y="180" width="140" height="44" rx="6" fill="#F5F5F5" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="5,3"/>
   <text x="510" y="198" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#AAAAAA">HUMAN</text>
   <text x="510" y="213" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#BBBBBB">rubber-stamps</text>
-
   <rect x="566" y="172" width="68" height="24" rx="4" fill="none" stroke="#C62828" stroke-width="1.5" transform="rotate(-12,600,184)"/>
   <text x="600" y="187" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="11" fill="#C62828" transform="rotate(-12,600,184)">APPROVED</text>
-
-  <line x1="510" y1="224" x2="510" y2="242" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr2-faded)"/>
-
+  <line x1="510" y1="224" x2="510" y2="242" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a5f)"/>
   <rect x="440" y="244" width="140" height="40" rx="6" fill="#ECEFF1" stroke="#546E7A" stroke-width="2"/>
   <text x="510" y="268" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#263238">DECISION</text>
-
   <rect x="402" y="302" width="216" height="36" rx="6" fill="#FFEBEE" stroke="#C62828" stroke-width="1.5"/>
   <text x="510" y="318" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#C62828">Authority drifts to AI</text>
   <text x="510" y="332" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#B71C1C">Gate is decorative</text>
-
   <text x="340" y="372" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#555">Same artifacts. Different reality. Indistinguishable from outside the process.</text>
 </svg>
   </div>
 </div>
 
-
 <hr class="divider">
 
-<!-- ============================================================ -->
-<!-- SLIDE 6: CYBORG FAILURE MODES -->
-<!-- ============================================================ -->
+<!-- SLIDE 6 -->
 <div class="diagram-section" id="slide6">
   <div class="diagram-label">Slide 6</div>
   <div class="diagram-title">Cyborg Failure Modes</div>
   <div class="diagram-wrap">
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 420" style="display:block">
   <defs>
-    <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-    <marker id="arr3-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#C62828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-    <marker id="arr3-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
+    <marker id="a6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="a6r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#C62828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
-
-  <!-- HUMAN supervisor at top -->
   <rect x="270" y="16" width="140" height="44" rx="6" fill="#C8E6C9" stroke="#388E3C" stroke-width="2"/>
   <text x="340" y="34" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#1B5E20">HUMAN</text>
   <text x="340" y="50" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#2E7D32">monitors by exception</text>
-
-  <!-- Dashed supervisory lines down to each stage -->
-  <line x1="340" y1="60" x2="340" y2="110" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="340" y1="60" x2="200" y2="110" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="340" y1="60" x2="480" y2="110" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="340" y1="60" x2="100" y2="130" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="340" y1="60" x2="580" y2="130" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
-
-  <!-- Stage row: 5 AI boxes -->
-  <!-- Stage 1 -->
+  <line x1="340" y1="60" x2="96" y2="130" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="340" y1="60" x2="236" y2="130" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="340" y1="60" x2="340" y2="130" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="340" y1="60" x2="444" y2="130" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="340" y1="60" x2="584" y2="130" stroke="#388E3C" stroke-width="1" stroke-dasharray="4,3"/>
   <rect x="46" y="130" width="100" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
   <text x="96" y="148" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#0D47A1">AI</text>
   <text x="96" y="163" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#1565C0">Ideation</text>
-
-  <!-- Stage 2 -->
   <rect x="186" y="130" width="100" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
   <text x="236" y="148" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#0D47A1">AI</text>
   <text x="236" y="163" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#1565C0">Analysis</text>
-
-  <!-- Stage 3 -->
   <rect x="290" y="130" width="100" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
   <text x="340" y="148" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#0D47A1">AI</text>
   <text x="340" y="163" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#1565C0">Refinement</text>
-
-  <!-- Stage 4 -->
   <rect x="394" y="130" width="100" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
   <text x="444" y="148" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#0D47A1">AI</text>
   <text x="444" y="163" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#1565C0">Critique</text>
-
-  <!-- Stage 5 -->
   <rect x="534" y="130" width="100" height="44" rx="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
   <text x="584" y="148" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#0D47A1">AI</text>
   <text x="584" y="163" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="11" fill="#1565C0">Execution</text>
-
-  <!-- Arrows between stages -->
-  <line x1="146" y1="152" x2="184" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#arr3)"/>
-  <line x1="286" y1="152" x2="288" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#arr3)"/>
-  <line x1="390" y1="152" x2="392" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#arr3)"/>
-  <line x1="494" y1="152" x2="532" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#arr3)"/>
-
-  <!-- ERROR enters at stage 1 -->
+  <line x1="146" y1="152" x2="184" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#a6)"/>
+  <line x1="286" y1="152" x2="288" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#a6)"/>
+  <line x1="390" y1="152" x2="392" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#a6)"/>
+  <line x1="494" y1="152" x2="532" y2="152" stroke="#555" stroke-width="1.5" marker-end="url(#a6)"/>
   <text x="56" y="126" font-family="'Permanent Marker',cursive" font-size="11" fill="#C62828">⚠</text>
   <text x="66" y="126" font-family="'Caveat',sans-serif" font-size="11" fill="#C62828">error enters</text>
-
-  <!-- Error propagation line — growing under stages -->
-  <path d="M 96 174 Q 236 196 340 192 Q 444 188 584 174" fill="none" stroke="#C62828" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr3-red)"/>
+  <path d="M 96 174 Q 236 196 340 192 Q 444 188 584 174" fill="none" stroke="#C62828" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a6r)"/>
   <text x="340" y="208" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#C62828">error accumulates silently across stages</text>
-
-  <!-- FAILURE MODES — three labeled boxes below -->
-  <!-- Observability Gap -->
   <rect x="30" y="240" width="180" height="64" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5"/>
   <text x="120" y="260" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#BF360C">Observability Gap</text>
   <text x="120" y="277" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#E65100">No checkpoint to</text>
   <text x="120" y="292" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#E65100">surface the error</text>
-
-  <!-- Error Propagation -->
   <rect x="250" y="240" width="180" height="64" rx="8" fill="#FFEBEE" stroke="#C62828" stroke-width="1.5"/>
   <text x="340" y="260" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#B71C1C">Error Propagation</text>
   <text x="340" y="277" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#C62828">Delayed impact,</text>
   <text x="340" y="292" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#C62828">no clear origin</text>
-
-  <!-- Responsibility Diffusion -->
   <rect x="470" y="240" width="180" height="64" rx="8" fill="#EDE7F6" stroke="#6A1B9A" stroke-width="1.5"/>
   <text x="560" y="260" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#4A148C">Responsibility</text>
   <text x="560" y="276" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#4A148C">Diffusion</text>
   <text x="560" y="293" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#6A1B9A">Who owns this?</text>
-
-  <!-- Connector lines from error path to failure boxes -->
-  <line x1="120" y1="210" x2="120" y2="238" stroke="#E65100" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arr3)"/>
-  <line x1="340" y1="210" x2="340" y2="238" stroke="#C62828" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arr3-red)"/>
-  <line x1="560" y1="210" x2="560" y2="238" stroke="#6A1B9A" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arr3)"/>
-
-  <!-- Bottom note -->
+  <line x1="120" y1="210" x2="120" y2="238" stroke="#E65100" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#a6)"/>
+  <line x1="340" y1="210" x2="340" y2="238" stroke="#C62828" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#a6r)"/>
+  <line x1="560" y1="210" x2="560" y2="238" stroke="#6A1B9A" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#a6)"/>
   <text x="340" y="334" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#555">Accountability distributed across enough layers belongs to no one.</text>
   <text x="340" y="352" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#888">— Feynman, Rogers Commission</text>
-
 </svg>
   </div>
 </div>
+
+<hr class="divider">
+
+<!-- SLIDE 8 -->
+<div class="diagram-section" id="slide8">
+  <div class="diagram-label">Slide 8</div>
+  <div class="diagram-title">Three-Phase Evolution</div>
+  <div class="diagram-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 380" style="display:block">
+  <defs>
+    <marker id="a8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <line x1="40" y1="310" x2="640" y2="310" stroke="#999" stroke-width="2" marker-end="url(#a8)"/>
+  <text x="650" y="315" font-family="'Caveat',sans-serif" font-size="13" fill="#888">time</text>
+  <rect x="40" y="36" width="178" height="256" rx="10" fill="#F1F8E9" stroke="#AED581" stroke-width="1.5"/>
+  <text x="129" y="60" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="15" fill="#558B2F">Phase 1</text>
+  <text x="129" y="78" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#7CB342">2022 — early 2023</text>
+  <rect x="68" y="96" width="60" height="32" rx="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="1.5"/>
+  <text x="98" y="116" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#1B5E20">HUMAN</text>
+  <rect x="140" y="96" width="52" height="32" rx="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="166" y="116" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#0D47A1">AI</text>
+  <rect x="68" y="144" width="52" height="32" rx="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="94" y="164" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#0D47A1">AI</text>
+  <rect x="140" y="144" width="52" height="32" rx="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="166" y="164" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#0D47A1">AI</text>
+  <text x="129" y="210" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#558B2F">Atomic</text>
+  <text x="129" y="228" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#689F38">100% isolated tasks</text>
+  <text x="129" y="244" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#689F38">LLMs as curiosities</text>
+  <line x1="129" y1="284" x2="129" y2="310" stroke="#AED581" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="234" y="36" width="178" height="256" rx="10" fill="#FFF8E1" stroke="#FFB300" stroke-width="2.5"/>
+  <rect x="234" y="36" width="178" height="256" rx="10" fill="#FF6F00" fill-opacity="0.06"/>
+  <text x="323" y="60" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="15" fill="#E65100">Phase 2</text>
+  <text x="323" y="78" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#FB8C00">mid 2023 — early 2024</text>
+  <rect x="258" y="96" width="60" height="32" rx="5" fill="#F5F5F5" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="288" y="116" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#AAAAAA">HUMAN</text>
+  <line x1="318" y1="112" x2="336" y2="112" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#a8)"/>
+  <polygon points="358,96 374,112 358,128 342,112" fill="#F5F5F5" stroke="#BBBBBB" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="358" y="116" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="9" fill="#AAAAAA">gate</text>
+  <rect x="270" y="152" width="52" height="32" rx="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="296" y="172" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#0D47A1">AI</text>
+  <rect x="326" y="148" width="58" height="20" rx="3" fill="none" stroke="#C62828" stroke-width="1.5" transform="rotate(-10,355,158)"/>
+  <text x="355" y="162" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="9" fill="#C62828" transform="rotate(-10,355,162)">APPROVED</text>
+  <text x="323" y="210" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#E65100">Delegation</text>
+  <text x="323" y="228" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#FB8C00">~70% Degraded Centaur</text>
+  <rect x="254" y="242" width="138" height="24" rx="5" fill="#FF6F00" fill-opacity="0.12" stroke="#E65100" stroke-width="1.5"/>
+  <text x="323" y="258" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#C62828">⚠ danger zone</text>
+  <line x1="323" y1="284" x2="323" y2="310" stroke="#FFB300" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="428" y="36" width="210" height="256" rx="10" fill="#E3F2FD" stroke="#64B5F6" stroke-width="1.5"/>
+  <text x="533" y="60" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="15" fill="#1565C0">Phase 3</text>
+  <text x="533" y="78" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#42A5F5">mid 2024 — present</text>
+  <text x="450" y="104" font-family="'Caveat',sans-serif" font-size="12" fill="#555">Atomic</text>
+  <rect x="510" y="92" width="100" height="14" rx="3" fill="#C8E6C9" stroke="#388E3C" stroke-width="1"/>
+  <text x="614" y="104" font-family="'Caveat',sans-serif" font-size="11" fill="#388E3C">50%</text>
+  <text x="450" y="126" font-family="'Caveat',sans-serif" font-size="12" fill="#555">Active</text>
+  <rect x="510" y="114" width="50" height="14" rx="3" fill="#A5D6A7" stroke="#388E3C" stroke-width="1"/>
+  <text x="564" y="126" font-family="'Caveat',sans-serif" font-size="11" fill="#388E3C">25%</text>
+  <text x="450" y="148" font-family="'Caveat',sans-serif" font-size="12" fill="#555">Degraded</text>
+  <rect x="510" y="136" width="40" height="14" rx="3" fill="#FFCCBC" stroke="#E64A19" stroke-width="1"/>
+  <text x="554" y="148" font-family="'Caveat',sans-serif" font-size="11" fill="#E64A19">20%</text>
+  <text x="450" y="170" font-family="'Caveat',sans-serif" font-size="12" fill="#555">Cyborg</text>
+  <rect x="510" y="158" width="10" height="14" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1"/>
+  <text x="524" y="170" font-family="'Caveat',sans-serif" font-size="11" fill="#1565C0">5%</text>
+  <text x="533" y="210" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="13" fill="#1565C0">Differentiation</text>
+  <text x="533" y="228" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#42A5F5">Patterns diverge</text>
+  <text x="533" y="244" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="12" fill="#42A5F5">Cyborg remains minority</text>
+  <line x1="533" y1="284" x2="533" y2="310" stroke="#64B5F6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="340" y="346" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#555">Both contexts. Opposing governance. Identical trajectory.</text>
+</svg>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SLIDE 10 -->
+<div class="diagram-section" id="slide10">
+  <div class="diagram-label">Slide 10</div>
+  <div class="diagram-title">Architecture Selection</div>
+  <div class="diagram-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 680 400" style="display:block">
+  <defs>
+    <marker id="a10" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="28" y="220" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#888" transform="rotate(-90,28,220)">cost of failure</text>
+  <line x1="40" y1="340" x2="40" y2="40" stroke="#999" stroke-width="1.5" marker-end="url(#a10)"/>
+  <rect x="56" y="290" width="590" height="72" rx="10" fill="#E3F2FD" stroke="#64B5F6" stroke-width="1.5"/>
+  <text x="116" y="316" font-family="'Permanent Marker',cursive" font-size="13" fill="#1565C0">Tier 3 — Low impact</text>
+  <rect x="116" y="326" width="80" height="28" rx="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="1.5"/>
+  <text x="156" y="344" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#1B5E20">ATOMIC</text>
+  <rect x="210" y="326" width="80" height="28" rx="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="250" y="344" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#0D47A1">CYBORG</text>
+  <text x="460" y="322" font-family="'Caveat',sans-serif" font-size="13" fill="#1565C0">Reversible tasks</text>
+  <text x="460" y="340" font-family="'Caveat',sans-serif" font-size="13" fill="#1565C0">Spot-checking only</text>
+  <text x="460" y="356" font-family="'Caveat',sans-serif" font-size="12" fill="#90CAF9">Cyborg requires mature observability</text>
+  <rect x="56" y="194" width="590" height="84" rx="10" fill="#FFF8E1" stroke="#FFB300" stroke-width="1.5"/>
+  <text x="116" y="218" font-family="'Permanent Marker',cursive" font-size="13" fill="#E65100">Tier 2 — Moderate</text>
+  <rect x="116" y="228" width="80" height="28" rx="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="1.5"/>
+  <text x="156" y="246" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#1B5E20">HUMAN</text>
+  <line x1="196" y1="242" x2="212" y2="242" stroke="#555" stroke-width="1.5" marker-end="url(#a10)"/>
+  <rect x="214" y="228" width="60" height="28" rx="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="244" y="246" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#0D47A1">AI</text>
+  <line x1="274" y1="242" x2="290" y2="242" stroke="#555" stroke-width="1.5" marker-end="url(#a10)"/>
+  <polygon points="308,228 324,242 308,256 292,242" fill="#FFF9C4" stroke="#F57F17" stroke-width="1.5"/>
+  <text x="308" y="246" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="10" fill="#E65100">gate</text>
+  <text x="460" y="228" font-family="'Caveat',sans-serif" font-size="13" fill="#E65100">Enforce validation gates</text>
+  <text x="460" y="246" font-family="'Caveat',sans-serif" font-size="13" fill="#E65100">Not just suggest them</text>
+  <text x="460" y="264" font-family="'Caveat',sans-serif" font-size="12" fill="#FFB300">Bounded consequences</text>
+  <rect x="56" y="56" width="590" height="124" rx="10" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
+  <rect x="430" y="66" width="100" height="26" rx="5" fill="#C62828"/>
+  <text x="480" y="83" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="12" fill="#FDF8F0">MANDATORY</text>
+  <text x="116" y="84" font-family="'Permanent Marker',cursive" font-size="13" fill="#B71C1C">Tier 1 — High impact</text>
+  <rect x="116" y="96" width="80" height="28" rx="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="2"/>
+  <text x="156" y="114" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#1B5E20">HUMAN</text>
+  <line x1="196" y1="110" x2="212" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#a10)"/>
+  <rect x="214" y="96" width="60" height="28" rx="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
+  <text x="244" y="114" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#0D47A1">AI</text>
+  <line x1="274" y1="110" x2="290" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#a10)"/>
+  <polygon points="308,96 324,110 308,124 292,110" fill="#FFF9C4" stroke="#F57F17" stroke-width="2"/>
+  <text x="308" y="114" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="10" fill="#E65100">gate</text>
+  <line x1="324" y1="110" x2="340" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#a10)"/>
+  <rect x="342" y="96" width="80" height="28" rx="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="2"/>
+  <text x="382" y="114" text-anchor="middle" font-family="'Permanent Marker',cursive" font-size="10" fill="#1B5E20">HUMAN</text>
+  <text x="116" y="154" font-family="'Caveat',sans-serif" font-size="13" fill="#C62828">Safety, compliance, financial exposure</text>
+  <text x="116" y="170" font-family="'Caveat',sans-serif" font-size="13" fill="#C62828">Irreversible decisions</text>
+  <text x="340" y="378" text-anchor="middle" font-family="'Caveat',sans-serif" font-size="13" fill="#555">Align to risk tier, not model capability. You don't skip stages.</text>
+</svg>
+  </div>
+</div>
+
+<footer>Brian Moriarty &nbsp;|&nbsp; IEEE SysCon 2026 &nbsp;|&nbsp; Licensed under CC BY 4.0</footer>
 
 </body>
 </html>
